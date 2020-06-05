@@ -46,11 +46,6 @@ from std_msgs.msg import String
 
 print(cv2.__version__)
 
-
-
-
-
-
 def talker():
     pub = rospy.Publisher('chatter', String, queue_size=10)
     rospy.init_node('talker', anonymous=True)
