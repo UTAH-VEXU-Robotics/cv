@@ -7,7 +7,14 @@ project(cv)
 ## Find catkin macros and libraries
 ## if COMPONENTS list like find_package(catkin REQUIRED COMPONENTS xyz)
 ## is used, also find other catkin packages
-find_package(catkin REQUIRED COMPONENTS sensor_msgs cv_bridge roscpp std_msgs image_transport)
+find_package(catkin REQUIRED COMPONENTS
+sensor_msgs
+cv_bridge 
+roscpp 
+rospy
+std_msgs 
+image_transport
+)
 
 ## System dependencies are found with CMake's conventions
 # find_package(Boost REQUIRED COMPONENTS system)
