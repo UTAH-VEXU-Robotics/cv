@@ -240,9 +240,10 @@ def get_blob_relative_position(image, keyPoint):
 if __name__=="__main__":
 
     #--- Define HSV limits
-    color_min = (140,30,0)
-    color_max = (255, 255, 255) 
-    
+    color_min = (140,30,0)          #red ball
+    color_max = (255, 255, 255)     #red ball
+    #color_min = (80, 30, 0)          #blue ball
+    #color_max = (140, 255, 255)      #blue ball
     #sys.stdout.write("")
     #--- Define area limit [x_min, y_min, x_max, y_max] adimensional (0.0 to 1.0) starting from top left corner
     window = [0, 0, 1, 1]
@@ -256,7 +257,7 @@ if __name__=="__main__":
         while(True):
             # Capture frame-by-frame
             ret, frame = cap.read()
-            
+            # /front_camera/front_camera/rgb/image_rect_color
             #-- Detect keypoints
             keypoints, _ = blob_detect(frame, color_min, color_max, blur=3, 
                                         blob_params=None, search_window=window, imshow=False)
